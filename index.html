@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-font="large">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="四上数学冒险岛" />
+  <meta name="theme-color" content="#FFFBF2" />
+  <title>四年级数学奇妙冒险岛 · 北师大版（上册）自学互动乐园</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏝️</text></svg>" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <!-- 礼花庆祝动效层 -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- 顶部常驻工具栏（星星统计 · 三档字号切换 · 豆沙绿护眼 · 音效开关） -->
+  <header class="top-header">
+    <div class="header-inner">
+      <button class="brand-logo" id="brand-home" title="返回探险地图首页">
+        <span class="brand-icon">🏝️</span>
+        <span>
+          <div class="brand-title">四年级数学奇妙冒险岛</div>
+          <div class="brand-sub">北师大版 · 四年级上册（新教材同步自学站）</div>
+        </span>
+      </button>
+
+      <div class="header-controls">
+        <span class="stat-pill" title="累计获得的智慧星星">⭐ <span id="hdr-stars" class="num">0</span></span>
+        <button class="tool-btn" id="btn-font" title="切换手机/iPad阅读字号">🔠 字号:大</button>
+        <button class="tool-btn" id="btn-eye" title="开启或关闭豆沙绿护眼模式">🌿 护眼</button>
+        <button class="tool-btn active" id="btn-sound" title="开启或关闭互动音效">🔊 音效</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主内容动态挂载区 -->
+  <main class="main-container" id="app-main">
+    <noscript>请开启浏览器的 JavaScript 功能以体验数学互动实验室哦！</noscript>
+  </main>
+
+  <!-- 底部触控导航栏（专为手机单手与 iPad 触屏设计） -->
+  <nav class="bottom-nav" aria-label="主导航">
+    <div class="bottom-nav-inner">
+      <button class="nav-item active" data-nav="map">
+        <span class="nav-emoji">🗺️</span>
+        <span>探险地图</span>
+      </button>
+      <button class="nav-item" data-nav="labs">
+        <span class="nav-emoji">🔬</span>
+        <span>奇妙实验室</span>
+      </button>
+      <button class="nav-item" data-nav="wrong">
+        <span class="nav-emoji">📓</span>
+        <span>错题宝典</span>
+        <span class="nav-badge-count" id="wrong-count-badge" style="display:none;">0</span>
+      </button>
+      <button class="nav-item" data-nav="badges">
+        <span class="nav-emoji">🏆</span>
+        <span>荣誉勋章</span>
+      </button>
+    </div>
+  </nav>
+
+  <script src="./js/sound.js"></script>
+  <script src="./js/curriculum-part1.js"></script>
+  <script src="./js/curriculum-part2.js"></script>
+  <script src="./js/labs.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
